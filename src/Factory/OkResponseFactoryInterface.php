@@ -11,7 +11,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Drewlabs\Http;
+namespace Drewlabs\Http\Factory;
 
 interface OkResponseFactoryInterface
 {
@@ -22,8 +22,9 @@ interface OkResponseFactoryInterface
      * @template TResponse
      *
      * @param TValue $data
+     * @param array $headers
      *
      * @return TResponse
      */
-    public function create($data);
+    public function create($data, array $headers = []);
 }

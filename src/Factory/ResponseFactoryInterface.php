@@ -11,20 +11,27 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Drewlabs\Http;
+namespace Drewlabs\Http\Factory;
 
+use Psr\Http\Message\ResponseInterface;
+
+/**
+ * @template TResponse
+ * 
+ * @method TResponse create($data, $status = null, array $headers = [], string $protocol = '1.1')
+ * @method TResponse create(\Psr\Http\Message\ResponseInterface $response, bool $streamed)
+ * 
+ * @package Drewlabs\Http\Factory
+ */
 interface ResponseFactoryInterface
 {
     /**
-     * Creates an HTTP response with `data`, `status code` and HTTP `headers`.
-     *
-     * @template TValue
+     * Creates HTTP response instance
+     * 
      * @template TResponse
-     *
-     * @param TValue     $data
-     * @param int|string $protocol
-     *
-     * @return TResponse
+     * 
+     * @param mixed  ...$args
+     * @return TResponse 
      */
-    public function create($data, int $status, array $headers = [], string $protocol = '1.1');
+    public function create(...$args);
 }
