@@ -13,25 +13,22 @@ declare(strict_types=1);
 
 namespace Drewlabs\Http\Factory;
 
-use Psr\Http\Message\ResponseInterface;
-
 /**
  * @template TResponse
- * 
+ *
  * @method TResponse create($data, $status = null, array $headers = [], string $protocol = '1.1')
  * @method TResponse create(\Psr\Http\Message\ResponseInterface $response, bool $streamed)
- * 
- * @package Drewlabs\Http\Factory
  */
 interface ResponseFactoryInterface
 {
     /**
-     * Creates HTTP response instance
-     * 
+     * Creates HTTP response instance.
+     *
      * @template TResponse
-     * 
-     * @param mixed  ...$args
-     * @return TResponse 
+     *
+     * @param mixed ...$args
+     *
+     * @return TResponse
      */
     public function create(...$args);
 }

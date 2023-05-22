@@ -19,11 +19,8 @@ interface BadRequestResponseFactoryInterface
      * Creates an HTTP response with an `unprocessable entity`HTTP code.
      *
      * @template TResponse
-     * 
-     * @param array $errors 
-     * @param array $headers
-     * 
-     * @return TResponse 
+     *
+     * @return TResponse
      */
     public function create(array $errors, array $headers = []);
 }

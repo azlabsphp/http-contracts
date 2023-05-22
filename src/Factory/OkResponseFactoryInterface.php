@@ -22,7 +22,6 @@ interface OkResponseFactoryInterface
      * @template TResponse
      *
      * @param TValue $data
-     * @param array $headers
      *
      * @return TResponse
      */

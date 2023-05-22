@@ -47,7 +47,6 @@ interface ResponseHandler
      *
      * @template TResponse
      *
-     * @param Throwable         $e
      * @param array|string|null $errors
      *
      * @return TResponse
